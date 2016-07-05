@@ -11,9 +11,14 @@ class Main extends Component {
   }
   render() {
     return (
-      <h1>
-        Hello From Main Component :)
-      </h1>
+      <div>
+        <h1>
+          Hello From Main Component :)
+        </h1>
+        <h2>
+          Hello again!
+        </h2>
+      </div>
     );
   }
 }

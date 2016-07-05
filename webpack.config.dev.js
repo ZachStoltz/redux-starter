@@ -5,12 +5,12 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:7001',
+    'webpack-dev-server/client?http://localhost:7000/',
     'webpack/hot/only-dev-server',
     './launcher'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '/static/'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
