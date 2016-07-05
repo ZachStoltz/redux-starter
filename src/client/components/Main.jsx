@@ -9,14 +9,25 @@ class Main extends Component {
   componentDidMount() {
     this.props.dispatch(testAction());
   }
+  shouldComponentUpdate(nextProps) {
+    const { test } = this.props;
+    console.log(test.data !== nextProps.test.data);
+    if(test.data !== nextProps.test.data || nextProps.test.isFetching) {
+      return true;
+    }
+
+    return false;
+  }
+  
   render() {
+    const { test } = this.props;
     return (
       <div>
         <h1>
           Hello From Main Component :)
         </h1>
         <h2>
-          Hello again!
+          {test.isFetching ? 'Loading.....' : test.data}
         </h2>
       </div>
     );

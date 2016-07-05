@@ -15,6 +15,10 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   res.render('index');
 });
+
+app.get('/api/test', (req, res) => {
+  res.status(200).send('world');
+});
 app.listen(7001, 'localhost', (err, result) => {
   if(err) {
     return console.log(err);
